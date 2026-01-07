@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  
+    <div class="d-flex">
+      <!-- sidebar -->
+        <div class="vh-100 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+                  Customers
+                </a>
+              </li>
+             </ul>
+             <hr>
+                <div class="dropdown">
+              <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="w-100">
+          <!-- navbar -->
+            <nav class="navbar bg-body-tertiary">
+                <div class=" container-fluid">
+                    <a class="navbar-brand">Navbar</a>
+                    <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+            <!-- content -->
+            <main>
+              <div class="d-flex">
+                <!-- total booking chart -->
+                <div class="card chart-container">
+                  <div class="p-2 d-flex justify-content-between align-items-center">
+                      <h4>Total Bookings</h3>
+                      <i class="bi bi-ticket-perforated"></i>
+                  </div>
+                  <div class="row">
+                    <div class="col-8">
+                      <canvas id="totalBookingsCanvas"></canvas>
+                    </div>
+                    <div class="col-4">
+                      <div class="p-3 text-end">
+                      <p class="h5 text-primary">2222</p>
+                      <P class="h6 text-success">22%</P>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- user registration chart -->
+                <div class="card chart-container">
+                  <div class="p-2 d-flex justify-content-between align-items-center">
+                    <h4> User Registration</h4>
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="row">
+                    <div class="col-8">
+                      <canvas id="userRegistration"></canvas>
+                    </div>
+                    <div class="col-4">
+                      <div class="p-3 text-end">
+                        <p class="h5 text-primary"> 23445</p>
+                        <p class="h6 text-success"> 10%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- today booking chart -->
+                <div class="card chart-container">
+                  <div class="p-2 d-flex justify-content-between align-items-center">
+                    <h4> Today Booking</h4>
+                    <i class="bi bi-person-check"></i>
+                  </div>
+                  <div class="row">
+                    <div class="col-8">
+                      <canvas id="todayBookings"></canvas>
+                    </div>
+                    <div class="col-4">
+                      <div class="p-3 text-end">
+                        <p class="h5 text-primary"> 222</p>
+                        <p class="h6 text-success"> 12%</p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </main>
+            <!-- <main>
+              <div class="card">
+                <div class="d-flex">
+                  <canvas id="topMoviesChart"></canvas>
+                </div>
+            </main> -->
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/asset/admin-data.js"></script>
+    <script type ="module" src="/admin-dashboard/dashboard.js"></script>
+</body>
+</html>

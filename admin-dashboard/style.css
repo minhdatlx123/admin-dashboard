@@ -1,0 +1,18 @@
+.chart-container i {
+    font-size: 50px;
+    color: red;
+    min-width: auto;
+    min-height: 100px;
+}
+:root {
+    --bs-primary-rgb: 43, 59, 145;
+    }
+.card {
+    flex: 1;
+    min-width: 300px;
+    min-height: 200px;
+}
+main .d-flex{
+    gap: 1rem;
+    padding: 1rem;
+}
